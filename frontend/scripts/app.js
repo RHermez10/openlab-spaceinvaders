@@ -35,5 +35,7 @@ function loadScore () {
 }
 
 function saveScore (score) {
-  localStorage.setItem('score', JSON.stringify(score));
+  localStorage.setItem('score', JSON.stringify(score.map((s) => ({
+    points: s.points
+  }))));
 }
