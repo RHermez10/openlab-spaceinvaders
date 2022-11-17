@@ -53,7 +53,7 @@ function initLevel1() {
   playerBulletController = new BulletController({
     canvas,
     maxBulletsAtATime: 10,
-    bulletColor: "#96FA9D",
+    bulletColor: "#000000",
     soundEnabled: true,
   });
   enemyBulletController = new BulletController({
