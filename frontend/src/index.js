@@ -127,6 +127,16 @@ async function sceneGameOver() {
   ctx.textBaseline = "middle";
   ctx.textAlign = "center";
   ctx.fillText("Game Over", game.width / 2, game.height / 2);
+  ctx.font = "16px Arial";
+  ctx.fillText("touch to restart.", canvas.width / 2, canvas.height / 2 + 40);
+
+  function startGame() {
+    canvas.removeEventListener("click", startGame);
+    isSceneInitilized = false;
+    scene = "level1";
+  }
+
+  canvas.addEventListener("click", startGame);
 }
 
 function sceneVictory() {
