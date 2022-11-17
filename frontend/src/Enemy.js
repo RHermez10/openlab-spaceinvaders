@@ -3,7 +3,7 @@ export default class Enemy {
     this.x = x;
     this.y = y;
     this.width = 44;
-    this.height = 32;
+    this.height = 20;
 
     this.image = new Image();
     this.image.src = `images/enemy-${imageNumber}.png`;
