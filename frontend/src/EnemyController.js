@@ -3,12 +3,12 @@ import MovingDirection from "./MovingDirection.js";
 
 export default class EnemyController {
   enemyMap = [
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [2, 2, 2, 3, 3, 3, 3, 2, 2, 2],
-    [2, 2, 2, 3, 3, 3, 3, 2, 2, 2],
-    [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    [1, 1, 2, 2, 1, 1, 2, 2, 1, 1],
+    [2, 2, 3, 3, 2, 2, 3, 3, 2, 2],
+    [1, 1, 2, 2, 1, 1, 2, 2, 1, 1],
+    [2, 2, 3, 3, 2, 2, 3, 3, 2, 2],
+    [1, 1, 2, 2, 1, 1, 2, 2, 1, 1],
+    [2, 2, 3, 3, 2, 2, 3, 3, 2, 2],
   ];
   enemyRows = [];
 
@@ -33,8 +33,8 @@ export default class EnemyController {
     this.enemyBulletController = enemyBulletController;
     this.playerBulletController = playerBulletController;
 
-    this.enemyDeathSound = new Audio("sounds/enemy-death.wav");
-    this.enemyDeathSound.volume = 0.1;
+    this.enemyDeathSound = new Audio("sounds/seagull-death.wav");
+    this.enemyDeathSound.volume = 0.5;
     this.moveDownTimerDefault = moveDownTimerDefault;
     this.fireBulletTimerDefault = fireBulletTimerDefault;
     this.defaultXVelocity = velocityX;
