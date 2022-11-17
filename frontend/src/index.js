@@ -42,14 +42,14 @@ async function gameLoop() {
 }
 function initMenu() {
   background = new Image();
-  background.src = "images/topographic-pattern.png";
+  background.src = "images/bg.png";
   background.onload = function () {
     isSceneInitilized = true;
   };
 }
 function initLevel1() {
   background = new Image();
-  background.src = "images/topographic-pattern.png";
+  background.src = "images/bg.png";
   playerBulletController = new BulletController({
     canvas,
     maxBulletsAtATime: 10,
