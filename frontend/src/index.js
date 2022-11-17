@@ -90,6 +90,7 @@ function sceneMenu() {
   ctx.fillText("touch to start.", canvas.width / 2, canvas.height / 2);
 
   function startGame() {
+    window['currentScore'] = 0;
     canvas.removeEventListener("click", startGame);
     isSceneInitilized = false;
     scene = "level1";
@@ -120,6 +121,9 @@ async function sceneGameOver() {
       }
     })
     isGameOverRun = true
+
+    window['addHighScore'](window['currentScore'])
+    window['currentScore'] = 0;
   }
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
   ctx.fillStyle = "white";
@@ -131,6 +135,7 @@ async function sceneGameOver() {
   ctx.fillText("touch to restart.", canvas.width / 2, canvas.height / 2 + 40);
 
   function startGame() {
+    currentScore = 0
     canvas.removeEventListener("click", startGame);
     isSceneInitilized = false;
     scene = "level1";

@@ -1,10 +1,11 @@
 import Bullet from "./Bullet.js";
+import {postLightFill, postLightScrollingText} from "./ledApi.js";
 
 export default class BulletController {
   bullets = [];
   timeTillNextBulletAllowed = 0;
 
-  constructor({ canvas, maxBulletsAtATime, bulletColor, soundEnabled }) {
+  constructor({canvas, maxBulletsAtATime, bulletColor, soundEnabled}) {
     this.canvas = canvas;
     this.maxBulletsAtATime = maxBulletsAtATime;
     this.bulletColor = bulletColor;
@@ -38,7 +39,7 @@ export default class BulletController {
     return false;
   }
 
-  shoot(x, y, velocity, timeTillNextBulletAllowed = 0) {
+  shoot(x, y, velocity, timeTillNextBulletAllowed = 0, isPlayer = false) {
     if (
       this.timeTillNextBulletAllowed <= 0 &&
       this.bullets.length < this.maxBulletsAtATime
@@ -50,6 +51,24 @@ export default class BulletController {
         this.shootSound.play();
       }
       this.timeTillNextBulletAllowed = timeTillNextBulletAllowed;
+    }
+
+    if (isPlayer) {
+      postLightFill({
+        color: {
+          r: Math.floor(Math.random() * 255),
+          g: Math.floor(Math.random() * 255),
+          b: Math.floor(Math.random() * 255),
+        }
+      })
+
+      // postLightScrollingText({
+      //   text: "Hej",
+      //   text_speed: 0.2,
+      //   color: {
+      //     r: 255, g: 0, b: 0
+      //   }
+      // });
     }
   }
 }

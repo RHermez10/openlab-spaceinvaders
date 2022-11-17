@@ -58,6 +58,7 @@ export default class EnemyController {
           this.enemyDeathSound.currentTime = 0;
           this.enemyDeathSound.play();
           enemyRow.splice(enemyIndex, 1);
+          window['currentScore'] += 100;
         }
       });
     });
