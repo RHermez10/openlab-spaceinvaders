@@ -7,7 +7,6 @@ h1 {
   margin-bottom: 10px;
   font-size: 2.9em;
   font-family: "Helvetica";
-  color: white;
 }
 
 body {
@@ -17,6 +16,69 @@ body {
   margin: 0px;
   align-items: center;
   flex-direction: column;
-  background-color: black;
+  font-family: 'Courier New', monospace;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.highscore-wrapper-false {
+  display: none;
+}
+
+.highscore-wrapper-true {
+  display: block;
+}
+
+.liststate-false > a:last-child,
+.liststate-true > a:first-child {
+
+}
+
+.liststate-false > a:first-child,
+.liststate-true > a:last-child {
+  background: #9FF;
+}
+
+.menu {
+  display: flex;
+}
+
+a {
+  flex-grow: 1;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+.game-wrapper {
+  position: relative;
+}
+
+.highscore-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 26px;
+}
+
+.highscore-wrapper-false {
+  display: none !important;
+>>>>>>> Stashed changes
 }
