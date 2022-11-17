@@ -53,7 +53,7 @@ function initLevel1() {
   playerBulletController = new BulletController({
     canvas,
     maxBulletsAtATime: 10,
-    bulletColor: "#96FA9D",
+    bulletColor: "#000000",
     soundEnabled: true,
   });
   enemyBulletController = new BulletController({
@@ -82,10 +82,10 @@ function initLevel1() {
 function sceneMenu() {
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
   ctx.font = "30px Arial";
-  ctx.fillStyle = "#96FA9D";
+  ctx.fillStyle = "#fff";
   ctx.textBaseline = "middle";
   ctx.textAlign = "center";
-  ctx.fillText("Queen Invaders", canvas.width / 2, canvas.height / 2 - 40);
+  ctx.fillText("Personal Space Invaders", canvas.width / 2, canvas.height / 2 - 40);
   ctx.font = "16px Arial";
   ctx.fillText("touch to start.", canvas.width / 2, canvas.height / 2);
 
